@@ -18,8 +18,8 @@ from xbmcswift import Plugin, download_page, xbmc, xbmcgui
 from xbmcswift.ext.playlist import playlist
 
 
-PLUGIN_NAME = 'OffeneKanaele'
-PLUGIN_ID = 'plugin.video.offene_kanaele'
+PLUGIN_NAME = 'GermanTV'
+PLUGIN_ID = 'plugin.video.GermanTV'
 
 
 plugin = Plugin(PLUGIN_NAME, PLUGIN_ID, __file__)
@@ -29,117 +29,117 @@ plugin.register_module(playlist, url_prefix='/_playlist')
 @plugin.route('/', default=True)
 def show_homepage():
     items = [
-        # Berlin
-        {'label': 'Berlin',
-         'url': plugin.url_for('berlin')},
-        # Dessau
-        {'label': 'Dessau',
-         'url': plugin.url_for('dessau')},
-        # Landau, Neustadt & Haßloch
-        {'label': 'Landau, Neustadt & Haßloch',
-         'url': plugin.url_for('landau')},
-        # Magdeburg
-        {'label': 'Magdeburg',
-         'url': plugin.url_for('magdeburg')},                  
-        # Merseburg
-        {'label': 'Merseburg',
-         'url': plugin.url_for('merseburg')},                           
-        # Pirmasens, Rodalben & Zweibrücken
-        {'label': 'Pirmasens, Rodalben & Zweibrücken',
-         'url': plugin.url_for('pirmasens')},
-        # Salzwedel
-        {'label': 'Salzwedel',
-         'url': plugin.url_for('salzwedel')},
-        # Speyer
-        {'label': 'Speyer',
-         'url': plugin.url_for('speyer')},
-        # Stendal
-        {'label': 'Stendal',
-         'url': plugin.url_for('stendal')},                  
-        # Trier
-        {'label': 'Trier',
-         'url': plugin.url_for('trier')},                  
-        # Wernigerode
-        {'label': 'Wernigerode',
-         'url': plugin.url_for('wernigerode')}
+        # ARD
+        {'label': 'ARD',
+         'url': plugin.url_for('ard')},
+        # ZDF
+        {'label': 'ZDF',
+         'url': plugin.url_for('zdf')},
+        # RTL
+        {'label': 'RTL',
+         'url': plugin.url_for('rtl')},
+        # SAT1
+        {'label': 'SAT1',
+         'url': plugin.url_for('sat1')},                  
+        # PRO7
+        {'label': 'PRO7',
+         'url': plugin.url_for('pro7')},                           
+        # RTL2
+        {'label': 'RTL2',
+         'url': plugin.url_for('rtl2')},
+        # VOX
+        {'label': 'VOX',
+         'url': plugin.url_for('vox')},
+        # 
+        {'label': 'Super RTL',
+         'url': plugin.url_for('super rtl')},
+        # 3sat
+        {'label': '3Sat',
+         'url': plugin.url_for('3sat')},                  
+        # ARTE
+        {'label': 'ARTE',
+         'url': plugin.url_for('arte')},                  
+        # VIVA
+        {'label': 'VIVA',
+         'url': plugin.url_for('viva')}
     ]
     return plugin.add_items(items)
 
 
-@plugin.route('/berlin/')
-def berlin():
-    url = 'http://alex-stream.rosebud-media.de:1935/live/alexlivetv.smil/playlist.m3u8'
-    li = xbmcgui.ListItem('Berlin')
+@plugin.route('/ard/')
+def ard():
+    url = 'http://webtv-aarh-9.stofa.dk:80/179_01.m3u8'
+    li = xbmcgui.ListItem('ARD')
     xbmc.Player(xbmc.PLAYER_CORE_AUTO).play(url, li)
     return []
 
-@plugin.route('/dessau/')
-def dessau():
-    url = 'http://62.113.210.250/medienasa-live/_definst_/mp4:ok-dessau_high/playlist.m3u8'
-    li = xbmcgui.ListItem('Dessau')
+@plugin.route('/zdf/')
+def zdf():
+    url = 'http://webtv-aarh-9.stofa.dk:80/184_01.m3u8'
+    li = xbmcgui.ListItem('ZDF')
     xbmc.Player(xbmc.PLAYER_CORE_AUTO).play(url, li)
     return []
 
-@plugin.route('/landau/')
-def landau():
-    url = 'mms://streaming.ok54.de/okweinstrasse'
-    li = xbmcgui.ListItem('Landau, Neustadt & Haßloch')
+@plugin.route('/rtl/')
+def rtl():
+    url = 'http://webtv-aarh-8.stofa.dk:80/187_01.m3u8'
+    li = xbmcgui.ListItem('RTL')
     xbmc.Player(xbmc.PLAYER_CORE_AUTO).play(url, li)
     return []
 
-@plugin.route('/magdeburg/')
-def magdeburg():
-    url = 'http://62.113.210.250/medienasa-live/_definst_/mp4:ok-magdeburg_high/playlist.m3u8'
-    li = xbmcgui.ListItem('Magdeburg')
+@plugin.route('/sat1/')
+def sat1():
+    url = 'http://webtv-aarh-8.stofa.dk:80/193_01.m3u8'
+    li = xbmcgui.ListItem('SAT1')
     xbmc.Player(xbmc.PLAYER_CORE_AUTO).play(url, li)
     return []
 
-@plugin.route('/merseburg/')
-def merseburg():
-    url = 'http://62.113.210.250/medienasa-live/_definst_/mp4:ok-merseburg_high/playlist.m3u8'
-    li = xbmcgui.ListItem('Merseburg')
+@plugin.route('/pro7/')
+def pro7():
+    url = 'http://webtv-aarh-8.stofa.dk:80/193_01.m3u8'
+    li = xbmcgui.ListItem('PRO7')
     xbmc.Player(xbmc.PLAYER_CORE_AUTO).play(url, li)
     return []
 
-@plugin.route('/pirmasens/')
-def pirmasens():
-    url = 'mms://streaming.ok54.de/suedwestpfalz-tv'
-    li = xbmcgui.ListItem('Pirmasens, Rodalben & Zweibrücken')
+@plugin.route('/rtl2/')
+def rtl2():
+    url = 'http://webtv-aarh-8.stofa.dk:80/188_01.m3u8'
+    li = xbmcgui.ListItem('RTL2')
     xbmc.Player(xbmc.PLAYER_CORE_AUTO).play(url, li)
     return []                
 
-@plugin.route('/salzwedel/')
-def salzwedel():
-    url = 'http://62.113.210.250/medienasa-live/_definst_/mp4:ok-salzwedel_high/playlist.m3u8'
-    li = xbmcgui.ListItem('Salzwedel')
+@plugin.route('/vox/')
+def vox():
+    url = 'http://webtv-aarh-8.stofa.dk:80/190_01.m3u8'
+    li = xbmcgui.ListItem('VOX')
     xbmc.Player(xbmc.PLAYER_CORE_AUTO).play(url, li)
     return []
 
-@plugin.route('/speyer/')
-def speyer():
-    url = 'http://s2.fairprice-streams.de:9420/;stream.nsv'
-    li = xbmcgui.ListItem('Speyer')
+@plugin.route('/super rtl/')
+def super rtl():
+    url = 'http://webtv-aarh-9.stofa.dk:80/189_01.m3u8'
+    li = xbmcgui.ListItem('Super RTL')
     xbmc.Player(xbmc.PLAYER_CORE_AUTO).play(url, li)
     return []
 
-@plugin.route('/stendal/')
-def stendal():
-    url = 'http://62.113.210.250/medienasa-live/_definst_/mp4:ok-stendal_high/playlist.m3u8'
-    li = xbmcgui.ListItem('Stendal')
+@plugin.route('/3sat/')
+def 3sat():
+    url = 'http://webtv-aarh-8.stofa.dk:80/182_01.m3u8'
+    li = xbmcgui.ListItem('3Sat')
     xbmc.Player(xbmc.PLAYER_CORE_AUTO).play(url, li)
     return []
 
-@plugin.route('/trier/')
-def trier():
-    url = 'mms://streaming.ok54.de/ok54'
-    li = xbmcgui.ListItem('Trier')
+@plugin.route('/arte/')
+def arte():
+    url = 'http://webtv-aarh-8.stofa.dk:80/180_01.m3u'
+    li = xbmcgui.ListItem('ARTE')
     xbmc.Player(xbmc.PLAYER_CORE_AUTO).play(url, li)
     return []
 
-@plugin.route('/wernigerode/')
-def wernigerode():
-    url = 'http://62.113.210.250/medienasa-live/_definst_/mp4:ok-wernigerode_high/playlist.m3u8'
-    li = xbmcgui.ListItem('Wernigerode')
+@plugin.route('/viva/')
+def viva():
+    url = 'http://webtv-aarh-9.stofa.dk:80/195_01.m3u8'
+    li = xbmcgui.ListItem('VIVA')
     xbmc.Player(xbmc.PLAYER_CORE_AUTO).play(url, li)
     return []
 
