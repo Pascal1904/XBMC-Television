@@ -52,7 +52,7 @@ def show_homepage():
          'url': plugin.url_for('vox')},
         # 
         {'label': 'Super RTL',
-         'url': plugin.url_for('super rtl')},
+         'url': plugin.url_for('superrtl')},
         # 3sat
         {'label': '3Sat',
          'url': plugin.url_for('3sat')},                  
@@ -116,7 +116,7 @@ def vox():
     return []
 
 @plugin.route('/super rtl/')
-def super rtl():
+def superrtl():
     url = 'http://webtv-aarh-9.stofa.dk:80/189_01.m3u8'
     li = xbmcgui.ListItem('Super RTL')
     xbmc.Player(xbmc.PLAYER_CORE_AUTO).play(url, li)
