@@ -19,7 +19,7 @@ from xbmcswift.ext.playlist import playlist
 
 
 PLUGIN_NAME = 'GermanTV'
-PLUGIN_ID = 'plugin.video.GermanTV'
+PLUGIN_ID = 'plugin.video.XBMC-Television'
 
 
 plugin = Plugin(PLUGIN_NAME, PLUGIN_ID, __file__)
